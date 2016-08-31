@@ -6,11 +6,23 @@ public class Predicao{
 	public static void main(String args[]) throws IOException{
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);
-		int TAM = 5;
+
+		System.out.print("Quantidade de linhas de dados: ");
+		int n = Integer.parseInt(br.readLine());
+		
+		int TAM = n;
+
 		int x[] = new int [TAM];
 		int y[] = new int [TAM];
-		x[0] = 0; x[1] = 2; x[2] = 4; x[3] = 6; x[4] = 8;
-		y[0] = 38; y[1] = 40; y[2] = 45; y[3] = 47; y[4] = 50;
+		
+		for(int i=0; i<TAM; i++){
+			System.out.println((i+1)+"ª linha");
+			System.out.print("Valor de x: ");
+			x[i] = Integer.parseInt(br.readLine());
+			System.out.print("Valor de y: ");
+			y[i] = Integer.parseInt(br.readLine());
+			System.out.println();
+		}
 
 		double mediax=0, mediay=0;
 		for(int i=0; i<TAM; i++){
